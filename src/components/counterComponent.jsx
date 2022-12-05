@@ -5,11 +5,6 @@ class Counter extends Component {
     count: 1,
   };
 
-  styleOne = {
-    fontSize: 20,
-    fontWeight: "bold",
-  };
-
   render() {
     let badge1 = "badge m-2 badge-";
     badge1 += this.state.count === 0 ? "warning" : "primary";
