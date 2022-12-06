@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 1,
+    count: 0,
     tags: ["tag1"],
   };
 
@@ -22,15 +22,8 @@ class Counter extends Component {
     );
   }
 
-  //   constructor() {
-  //     super();
-  //     this.handleIncrement = this.handleIncrement.bind(this);
-  //   }
-
   handleIncrement = () => {
-    console.log("Increment Clicked", this);
-    //obj.method();
-    // function();
+    this.setState({ count: this.state.count + 1 });
   };
 
   renderTags() {
