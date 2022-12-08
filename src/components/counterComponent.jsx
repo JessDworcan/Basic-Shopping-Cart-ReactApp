@@ -7,8 +7,11 @@ class Counter extends Component {
   };
 
   render() {
+    console.log(this.props);
+
     return (
       <div>
+        {this.props.children}
         <span className={this.getBadgeClass()}> {this.formatCount()} </span>
         <button
           style={{ width: "100px", height: "30px" }}
@@ -22,7 +25,7 @@ class Counter extends Component {
   }
 
   handleIncrement = () => {
-    this.setState({ count: this.state.value + 1 });
+    this.setState({ value: this.state.value + 1 });
   };
 
   renderTags() {
