@@ -4,7 +4,7 @@ class Counter extends Component {
   // includes data that is private to component
   state = {
     // props is data we give to a component
-    value: this.props.value,
+    value: this.props.counter.value,
     //tags: ["tag1"],
   };
 
@@ -20,7 +20,7 @@ class Counter extends Component {
           Increment
         </button>
         <button
-          onClick={this.props.onDelete}
+          onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm m-2"
         >
           Delete
