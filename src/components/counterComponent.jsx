@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
+  // includes data that is private to component
   state = {
+    // props is data we give to a component
     value: this.props.value,
-    tags: ["tag1"],
+    //tags: ["tag1"],
   };
 
   render() {
@@ -25,16 +27,16 @@ class Counter extends Component {
     this.setState({ value: this.state.value + 1 });
   };
 
-  renderTags() {
-    if (this.state.tags.length === 0) return <p>There are no tags!</p>;
-    return (
-      <ul>
-        {this.state.tags.map((tag) => (
-          <li>{tag}</li>
-        ))}
-      </ul>
-    );
-  }
+  // renderTags() {
+  //   if (this.state.tags.length === 0) return <p>There are no tags!</p>;
+  //   return (
+  //     <ul>
+  //       {this.state.tags.map((tag) => (
+  //         <li>{tag}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
   getBadgeClass() {
     let badge1 = "badge m-2 badge-";
