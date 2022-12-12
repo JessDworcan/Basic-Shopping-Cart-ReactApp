@@ -2,6 +2,7 @@ import React from "react";
 
 // Stateless Functional Component
 const Navbar = ({ totalCounters }) => {
+  console.log("Navbar - Rendered");
   return (
     <nav class="navbar bg-light">
       <div class="container-fluid">
